@@ -33,8 +33,9 @@ export default function Home() {
               Globalizing America&apos;s Payment Rails
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-muted-foreground">
-              Twynex helps US banks, issuers, and regulated partners connect
-              American customers to local payment rails abroad.
+              Twynex helps US banks and issuers turn familiar American payment
+              relationships into local payment experiences abroad, starting with
+              partner-led QR and card corridors.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="#offering">Explore the offering</Button>
@@ -60,7 +61,7 @@ export default function Home() {
           <Reveal>
             <Eyebrow tone="red">The problem</Eyebrow>
             <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight">
-              Domestic rails are modernizing. Cross-border acceptance remains fragmented.
+              Local payment rails are rising. American payment relationships still lose reach abroad.
             </h2>
           </Reveal>
           <Stagger className="grid gap-4 sm:grid-cols-2">
@@ -97,7 +98,7 @@ export default function Home() {
         <Reveal>
           <Eyebrow>What Twynex does</Eyebrow>
           <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-            American payment relationships into local international payment experiences.
+            The operating layer between US-side payment relationships and local acceptance abroad.
           </h2>
         </Reveal>
         <Stagger className="mt-9 grid gap-4 lg:grid-cols-4">
@@ -116,11 +117,12 @@ export default function Home() {
           <Reveal>
             <Eyebrow>Trust</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              A regulated-partner posture for corridor payments.
+              Designed for regulated participation from the start.
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted-foreground">
-              Twynex is designed around partner-bank participation, auditability, and
-              conservative compliance language pending legal review.
+              Twynex is designed around partner-led KYC, partner-owned flows where
+              applicable, sensitive data in partner systems where possible, encryption,
+              audit records, and payment-standard aligned messaging.
             </p>
           </Reveal>
           <Stagger className="grid gap-4 sm:grid-cols-2">
@@ -140,7 +142,7 @@ export default function Home() {
           <Reveal>
             <Eyebrow>Who we work with</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              Built for banks, issuers, and regulated partners that want corridor reach.
+              Built for partners that want corridor reach without rebuilding every local rail.
             </h2>
             <Button href="/partners" variant="secondary" className="mt-7 inline-block">
               Explore partner models
@@ -164,11 +166,11 @@ export default function Home() {
             <div>
               <Eyebrow tone="red">Start a conversation</Eyebrow>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-                Build the next cross-border payment corridor with Twynex.
+                Launch the next local payment corridor with Twynex.
               </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-                For partner, pilot, investor, or company inquiries, contact the
-                Twynex team.
+                For partner, pilot, investor, or company inquiries, start with the
+                payment moment, corridor, and partner role you want to explore.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">

@@ -25,11 +25,12 @@ export default function PartnersPage() {
           <Reveal className="max-w-4xl">
             <Eyebrow>Partner corridors</Eyebrow>
             <h1 className="mt-5 text-5xl font-semibold leading-[1.04] sm:text-6xl">
-              Turn local payment fragmentation into a partner-led cross-border corridor.
+              Launch local payment corridors without rebuilding every rail from scratch.
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-muted-foreground">
               Twynex helps regulated partners extend American payment relationships
-              into local payment experiences abroad.
+              into local payment experiences abroad through corridor-specific routing,
+              reporting, reconciliation, and partner coordination.
             </p>
             <Button href="/contact?inquiry=partner" className="mt-9 inline-block">
               Discuss a partner corridor
@@ -43,7 +44,7 @@ export default function PartnersPage() {
           <Reveal>
             <Eyebrow tone="red">Partner outcomes</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              Extend utility abroad without every partner building every local rail.
+              Keep customers active abroad while creating new corridor economics.
             </h2>
           </Reveal>
           <Stagger className="grid gap-4 sm:grid-cols-2">
@@ -62,7 +63,7 @@ export default function PartnersPage() {
         <Reveal>
           <Eyebrow>Partner role matrix</Eyebrow>
           <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-            Clear responsibilities across US-side, destination-side, and Twynex orchestration roles.
+            Clear responsibilities across US-side, destination-side, and orchestration roles.
           </h2>
         </Reveal>
         <Stagger className="mt-9 grid gap-4 lg:grid-cols-5">
@@ -81,7 +82,7 @@ export default function PartnersPage() {
           <Reveal>
             <Eyebrow tone="mint">How it works for partners</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              A corridor pilot can start narrow, then expand by rail, country, and service module.
+              Start with one payment moment, then expand by rail, country, and service module.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -95,12 +96,13 @@ export default function PartnersPage() {
           <Reveal>
             <Eyebrow>Operating model</Eyebrow>
             <h2 className="mt-4 text-3xl font-semibold leading-tight">
-              Designed for regulated partner ownership where applicable.
+              Designed around regulated partner ownership where applicable.
             </h2>
             <p className="mt-5 text-base leading-7 text-muted-foreground">
               KYC is performed by partner banks or regulated partners. Payment flows
               move through partner-owned accounts where applicable, and sensitive data
-              remains in partner systems where possible.
+              remains in partner systems where possible. Twynex coordinates the
+              operating layer around those partner responsibilities.
             </p>
           </Reveal>
           <Reveal delay={0.06}>
@@ -115,9 +117,9 @@ export default function PartnersPage() {
           <Reveal delay={0.12}>
             <InfoCard className="h-full" title="Integration and reporting">
               <p className="text-base leading-7 text-muted-foreground">
-                API or embedded partner flows can support routing, local rail connectivity,
-                transaction status, reconciliation, settlement reporting, audit trails,
-                and proof of provenance.
+                API or embedded partner flows can support routing, local rail
+                connectivity, transaction status, reconciliation, settlement reporting,
+                audit trails, and proof of provenance.
               </p>
             </InfoCard>
           </Reveal>
@@ -129,7 +131,7 @@ export default function PartnersPage() {
           <Reveal>
             <Eyebrow tone="red">Partner FAQ preview</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              Early partner conversations usually start with ownership, rails, and operations.
+              The right corridor discussion starts with ownership, rails, and operations.
             </h2>
             <Button href="/#faq" variant="secondary" className="mt-7 inline-block">
               Read FAQ
@@ -153,7 +155,7 @@ export default function PartnersPage() {
             <div>
               <Eyebrow tone="red">Start a corridor discussion</Eyebrow>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-                Discuss a partner corridor with Twynex.
+                Bring Twynex a customer moment, a corridor, or a partner role.
               </h2>
             </div>
             <Button href="/contact?inquiry=partner" variant="inverse">

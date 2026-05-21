@@ -19,11 +19,12 @@ export default function ProductsPage() {
           <Reveal className="max-w-4xl">
             <Eyebrow>Products</Eyebrow>
             <h1 className="mt-5 text-5xl font-semibold leading-[1.04] sm:text-6xl">
-              Initial product focus for local payment acceptance abroad.
+              Corridor products for local payment acceptance abroad.
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-muted-foreground">
               Twynex starts where local acceptance is visible, frequent, and
-              operationally hard: QR payments abroad and local cards for business travelers.
+              operationally hard: QR payments abroad and partner-led cards for
+              international business use.
             </p>
           </Reveal>
         </div>
@@ -33,7 +34,7 @@ export default function ProductsPage() {
         <Reveal>
           <Eyebrow tone="red">Service modules</Eyebrow>
           <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-            Product lines stay inside one partner-led orchestration offering.
+            Modular payment experiences, coordinated through one partner-led orchestration model.
           </h2>
         </Reveal>
         <Stagger className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -53,7 +54,7 @@ export default function ProductsPage() {
         <Reveal>
           <Eyebrow tone="red">Initial focus</Eyebrow>
           <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-            Product modules designed for corridor-first partner launches.
+            Start with concrete payment moments, then expand by rail and country.
           </h2>
         </Reveal>
         <Stagger className="mt-9 grid gap-4 lg:grid-cols-2">
@@ -80,7 +81,7 @@ export default function ProductsPage() {
             <div>
               <Eyebrow tone="red">Partner-led launches</Eyebrow>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-                Discuss a corridor product configuration with Twynex.
+                Discuss a corridor product configuration for your partner model.
               </h2>
             </div>
             <Button href="/contact?inquiry=pilot" variant="inverse">
