@@ -4,12 +4,12 @@ export function ProcessSteps({ steps }: { steps: string[] }) {
       {steps.map((step, index) => (
         <li
           key={step}
-          className="grid grid-cols-[2.5rem_1fr] items-start gap-4 rounded-lg bg-white/8 p-4 dark:bg-white/10"
+          className="grid grid-cols-[2.5rem_1fr] items-start gap-4 rounded-lg bg-panel-soft p-4"
         >
-          <span className="grid size-10 place-items-center rounded-lg bg-[#0d7c66] text-sm font-bold">
+          <span className="grid size-10 place-items-center rounded-lg bg-accent text-sm font-bold text-accent-foreground">
             {index + 1}
           </span>
-          <span className="pt-2 text-sm leading-6 text-[#f5efe6]">{step}</span>
+          <span className="pt-2 text-sm leading-6 text-panel-muted">{step}</span>
         </li>
       ))}
     </ol>

@@ -8,10 +8,10 @@ export function Roadmap({
       {items.map((item) => (
         <div
           key={item.date}
-          className="grid gap-4 rounded-lg bg-white/8 p-5 dark:bg-white/10 sm:grid-cols-[8rem_1fr]"
+          className="grid gap-4 rounded-lg bg-panel-soft p-5 sm:grid-cols-[8rem_1fr]"
         >
-          <p className="text-lg font-semibold text-[#f1c36d]">{item.date}</p>
-          <p className="text-lg leading-7 text-[#fffaf2]">{item.label}</p>
+          <p className="text-lg font-semibold text-brand-amber">{item.date}</p>
+          <p className="text-lg leading-7 text-panel-foreground">{item.label}</p>
         </div>
       ))}
     </div>

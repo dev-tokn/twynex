@@ -1,20 +1,84 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   --background: #fffaf2;
   --foreground: #171411;
+  --card: #ffffff;
+  --card-foreground: #171411;
+  --surface: #f7f4ee;
+  --muted: #f7f4ee;
+  --muted-foreground: #5f574d;
+  --subtle-foreground: #82776b;
+  --border: #ded5c7;
+  --primary: #171411;
+  --primary-foreground: #ffffff;
+  --primary-hover: #342d26;
+  --accent: #0d7c66;
+  --accent-foreground: #ffffff;
+  --accent-hover: #096b58;
+  --brand-red: #b24a3b;
+  --brand-amber: #d69b2d;
+  --brand-mint: #87d6c5;
+  --panel: #171411;
+  --panel-foreground: #ffffff;
+  --panel-muted: #d9d0c5;
+  --panel-soft: rgb(255 255 255 / 8%);
+  --rail-track: #e5ddd2;
+  --accent-soft: #e8f5f0;
 }
 
 .dark {
   --background: #0f1720;
   --foreground: #f8fafc;
+  --card: #121b28;
+  --card-foreground: #f8fafc;
+  --surface: #111827;
+  --muted: #0f1720;
+  --muted-foreground: #a8b4c5;
+  --subtle-foreground: #8fa3bd;
+  --border: #293344;
+  --primary: #f8fafc;
+  --primary-foreground: #101722;
+  --primary-hover: #dbe6f4;
+  --accent: #22a184;
+  --accent-foreground: #07120f;
+  --accent-hover: #5fcbb2;
+  --brand-red: #f08d7e;
+  --brand-amber: #f1c36d;
+  --brand-mint: #87d6c5;
+  --panel: #050812;
+  --panel-foreground: #ffffff;
+  --panel-muted: #d9d0c5;
+  --panel-soft: rgb(255 255 255 / 10%);
+  --rail-track: #263244;
+  --accent-soft: #0e302a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-brand-red: var(--brand-red);
+  --color-brand-amber: var(--brand-amber);
+  --color-brand-mint: var(--brand-mint);
+  --color-panel: var(--panel);
+  --color-panel-foreground: var(--panel-foreground);
+  --color-panel-muted: var(--panel-muted);
+  --color-panel-soft: var(--panel-soft);
+  --color-rail-track: var(--rail-track);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -30,6 +94,6 @@ html {
 }
 
 ::selection {
-  background: #0d7c66;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--accent-foreground);
 }

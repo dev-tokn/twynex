@@ -34,7 +34,8 @@ Theme behavior:
 - Theme support uses `next-themes`.
 - The default theme is `system`.
 - Manual theme selection is available through a fixed bottom-right toggle with `z-index: 100`.
-- Dark mode should preserve the same enterprise/infrastructure tone rather than becoming a high-contrast novelty skin.
+- Theme color changes should come from shadcn-style CSS variables in `globals.css`, not page-level `dark:` styling.
+- Components should prefer semantic Tailwind tokens such as `bg-background`, `bg-card`, `text-muted-foreground`, `border-border`, `bg-primary`, and `bg-accent`.
 
 Shape and spacing:
 
