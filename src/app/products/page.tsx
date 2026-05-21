@@ -1,12 +1,13 @@
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Section } from "@/components/layout/section";
+import { MotionCard } from "@/components/motion/motion-card";
 import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { InfoCard } from "@/components/ui/info-card";
-import { initialFocus } from "@/lib/site-content";
+import { initialFocus, serviceModules } from "@/lib/site-content";
 
 export default function ProductsPage() {
   return (
@@ -27,6 +28,26 @@ export default function ProductsPage() {
           </Reveal>
         </div>
       </section>
+
+      <Section tone="cream">
+        <Reveal>
+          <Eyebrow tone="red">Service modules</Eyebrow>
+          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
+            Product lines stay inside one partner-led orchestration offering.
+          </h2>
+        </Reveal>
+        <Stagger className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {serviceModules.map((module) => (
+            <StaggerItem key={module.title}>
+              <MotionCard className="h-full">
+                <InfoCard className="h-full" title={module.title}>
+                  <p className="text-base leading-7 text-muted-foreground">{module.copy}</p>
+                </InfoCard>
+              </MotionCard>
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </Section>
 
       <Section tone="sand">
         <Reveal>

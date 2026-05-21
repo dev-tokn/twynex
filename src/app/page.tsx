@@ -3,7 +3,6 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
-import { MotionCard } from "@/components/motion/motion-card";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { InfoCard } from "@/components/ui/info-card";
@@ -17,7 +16,6 @@ import {
   metrics,
   partnerTypes,
   problemPoints,
-  serviceModules,
   trustPoints,
   whatTwynexDoes,
 } from "@/lib/site-content";
@@ -93,26 +91,6 @@ export default function Home() {
             </StaggerItem>
           ))}
         </Stagger>
-
-        <div className="mt-14">
-          <Reveal>
-            <Eyebrow tone="red">Service modules</Eyebrow>
-            <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-              Product lines stay inside one partner-led orchestration offering.
-            </h2>
-          </Reveal>
-          <Stagger className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {serviceModules.map((module) => (
-              <StaggerItem key={module.title}>
-                <MotionCard className="h-full">
-                  <InfoCard className="h-full" title={module.title}>
-                    <p className="text-base leading-7 text-muted-foreground">{module.copy}</p>
-                  </InfoCard>
-                </MotionCard>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
       </Section>
 
       <Section id="trust" tone="white">
