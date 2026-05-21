@@ -1,197 +1,258 @@
 # Twynex Website Construct
 
-This document defines what the website should contain: pages, sections, message hierarchy, and content intent. It is the main working reference for website planning.
+This document defines the revised website organization, page responsibilities, navigation, and content priorities for Twynex.
+
+## Core Site Strategy
+
+The website should separate the general market story from partner-specific conversion.
+
+- The landing page is the general public entry point. It should explain the Twynex USP, the problem, the product lines, and why now.
+- `/partners` is the dedicated partner page. It should explain what Twynex does for banks, issuers, destination-country partners, resellers, and market partners, including their roles and how the operating model works.
+- Company, team, FAQ, contact, and legal pages should exist as standard site infrastructure instead of being squeezed into the homepage.
+
+## Primary Positioning
+
+Twynex is a cross-border transaction orchestration platform that helps US banks, issuers, and regulated partners connect American customers to local payment rails abroad.
+
+Short positioning:
+
+> Globalizing America's Payment Rails
+
+USP:
+
+Twynex is not a generic remittance, FX, or multicurrency account product. The wedge is American payment relationships connecting into local international payment experiences such as QR, wallets, NFC/transit, cards, bill pay, and merchant acceptance.
 
 ## Recommended Site Map
 
-### 1. Home
+### Core Product And Conversion Pages
+
+- `/` Home
+- `/products`
+- `/partners`
+- `/investors`
+- `/trust`
+
+### Company And Support Pages
+
+- `/about`
+- `/team`
+- `/faq`
+- `/contact`
+
+### Legal And Policy Pages
+
+- `/terms`
+- `/privacy`
+- `/cookies`
+
+## Navigation Recommendation
+
+Primary nav:
+
+- Products
+- Partners
+- Investors
+- Trust
+- Company
+
+Company dropdown or footer grouping:
+
+- About
+- Team
+- FAQ
+- Contact
+
+Footer legal:
+
+- Terms of Service
+- Privacy Policy
+- Cookie Policy
+
+Launch-minimum nav:
+
+- Products
+- Partners
+- Investors
+- Trust
+- Contact
+
+## Page Plans
+
+### 1. `/` Home
 
 Purpose:
 
-Introduce Twynex quickly, establish the market need, and route visitors to the right audience path.
+Introduce Twynex, establish the core USP, explain the initial product lines at a high level, and route visitors into partners, investors, or contact.
+
+Homepage should not try to explain every partner role in detail. That belongs on `/partners`.
 
 Sections:
 
 1. Hero
    - Headline: "Globalizing America's Payment Rails"
    - Supporting copy: Twynex helps US banks, issuers, and regulated partners connect American customers to local payment rails abroad.
-   - Primary CTA: "Partner with Twynex"
-   - Secondary CTA: "Investor Inquiry"
+   - Primary CTA: "Explore partner models"
+   - Secondary CTA: "View products"
 
-2. Problem
-   - Domestic payments are becoming faster.
+2. Market Problem
+   - Domestic rails are modernizing.
    - Cross-border acceptance remains fragmented.
-   - Travelers still face cash, card, wallet, FX, and local acceptance friction.
-   - Banks and issuers lose revenue when customers move outside their payment relationship abroad.
+   - Local rails abroad are increasingly dominant.
+   - American customers still face cash, card acceptance, QR, wallet, FX, transit, and merchant-payment friction.
 
-3. Solution
-   - Twynex provides cross-border transaction orchestration.
-   - It coordinates US-side partners, destination-country partners, local rails, FX logic, settlement, and auditability.
+3. Twynex USP
+   - Cross-border transaction orchestration.
+   - American payment relationships into local international payment experiences.
+   - Partner-led regulated operating model.
+   - Designed for corridor-by-corridor expansion.
 
-4. Audience Paths
-   - For travelers: pay abroad like a local.
-   - For banks and issuers: extend customer utility and create new international revenue.
-   - For investors and partners: enter a high-friction payments wedge with clear monetization.
-
-5. Initial Use Cases
+4. Product Overview
    - Cross-border QR payments.
    - Local cards for business travelers.
-   - Future local wallets, transit/NFC, bill payments, and local acquiring.
+   - Future products: immigrant bill payments, wallet acceptance, transit/NFC, local merchant acquiring.
 
-6. Compliance Preview
+5. How It Works, Simplified
+   - Customer starts from a US-side relationship.
+   - Twynex coordinates routing, partner instructions, FX metadata, compliance metadata, and reconciliation.
+   - Regulated partners process flows.
+   - Destination rail completes local acceptance.
+
+6. Audience Routing
+   - Partners: banks, issuers, local partners, resellers.
+   - Investors: wedge, roadmap, economics.
+   - Users/travelers: product vision and availability through partner corridors.
+
+7. Trust Preview
    - Partner-bank model.
    - KYC by regulated partners.
-   - Audit trail, encryption, ISO 20022, PCI-DSS aligned approach.
-
-7. Roadmap Preview
-   - Q4 2026: cross-border QR.
-   - Q1 2027: local cards for business travelers.
-   - 2028 onward: additional local payment rails and merchant use cases.
+   - Sensitive data kept in partner systems where possible.
+   - Audit trail designed to support AML, OFAC, SAR, and CFT workflows.
 
 8. Final CTA
    - "Build the next cross-border payment corridor with Twynex."
 
-### 2. Platform
+### 2. `/products`
 
 Purpose:
 
-Explain what Twynex is and how it works without making the public site too technical.
+Make Twynex concrete. Explain the product portfolio without overwhelming the homepage.
 
 Sections:
 
-1. Platform Overview
-   - Twynex is a cross-border transaction orchestration platform for American payment rails and local international rails.
+1. Product Portfolio Hero
+   - "Local payment experiences for American customers abroad."
 
-2. How It Works
-   - Step 1: Customer initiates payment through a US bank, issuer, or app relationship.
-   - Step 2: Twynex orchestrates transaction routing, FX metadata, compliance metadata, and partner instructions.
-   - Step 3: US and destination-country regulated partners process the payment flow.
-   - Step 4: Local rail completes the payment through QR, wallet, card, NFC, or payout method.
-   - Step 5: Reconciliation, reporting, and audit trail return to partners.
+2. Cross-Border QR Payments
+   - American tourist scans a local QR code abroad.
+   - Customer pays through a familiar US-side relationship.
+   - Merchant receives through local rails.
+   - Launch target: Q4 2026.
+   - Initial rollout: 3 Southeast Asia countries.
+   - 2030 ARR projection from deck: approximately USD 24.48M.
 
-3. Orchestration Capabilities
-   - Partner routing.
-   - Local rail connectivity.
-   - FX spread and settlement coordination.
-   - Transaction status and reconciliation.
-   - Compliance data trail.
-   - Partner-bank netting model.
+3. Local Cards For Business Travelers
+   - Card products for international travel and business use.
+   - Initial markets: India and Malaysia.
+   - Launch target: Q1 2027.
+   - 2030 ARR projection from deck: approximately USD 23.15M.
 
-4. Integration Model
-   - Bank/issuer embedded flow.
-   - International partner flow.
-   - Reseller/market partner flow.
+4. Future Product Lines
+   - Immigrant bill payments.
+   - Local wallet payments.
+   - Transit/NFC virtual card.
+   - Local merchant acquiring.
 
-5. Standards And Data
-   - ISO 20022 where appropriate.
-   - Card/NFC messaging alignment with Visa, Mastercard, and PCI-DSS requirements.
-   - Encryption at rest and in transit.
+5. Product Comparison Table
+   - User problem.
+   - Partner role.
+   - Destination rail.
+   - Initial markets.
+   - Revenue model.
+   - Launch status.
 
-### 3. Use Cases
+6. CTA
+   - "Discuss the right corridor or product line."
+
+### 3. `/partners`
 
 Purpose:
 
-Make Twynex concrete and easy to understand.
+Convert banks, issuers, destination-country partners, resellers, and market development partners. This is the main page for "what we do for partners and how it works for them."
 
 Sections:
 
-1. Cross-Border QR Payments
-   - Scenario: US tourist scans local QR abroad.
-   - Buyer benefit: pay from familiar US payment relationship.
-   - Merchant benefit: receive through local rails.
-   - Bank/issuer benefit: participate in international transaction economics.
-   - Launch note: Q4 2026 target, starting with 3 Southeast Asia countries.
+1. Partner Hero
+   - Headline direction: "Turn local payment fragmentation into a partner-led cross-border corridor."
+   - Supporting copy: Twynex helps regulated partners extend American payment relationships into local payment experiences abroad.
+   - CTA: "Discuss a partner corridor."
 
-2. Local Cards For Business Travelers
-   - Scenario: international business travelers use US-issued or partner-issued card products.
-   - Customer benefit: predictable travel spend experience.
-   - Issuer benefit: new volume and fees.
-   - Partner benefit: reseller and collection opportunities.
-   - Launch note: Q1 2027 target, starting with India and Malaysia.
+2. Partner Outcomes
+   - Extend customer utility abroad.
+   - Create new international transaction revenue.
+   - Participate in FX spread, platform fee, transaction fee, or revenue-share models where appropriate.
+   - Reduce the need for every partner to build direct local rail integrations.
+   - Improve reporting, reconciliation, and auditability across corridors.
 
-3. Family And Bill Payments
-   - Scenario: immigrants pay household bills for relatives abroad from US accounts.
-   - Benefit: practical payment utility, not just remittance.
+3. Partner Role Matrix
+   - US partner bank:
+     - Owns or supports US-side accounts and regulated flows.
+     - Performs or coordinates KYC as applicable.
+     - Provides customer distribution or payment relationship access.
+   - US issuer:
+     - Extends card or payment utility for travelers/business users.
+     - Participates in transaction economics and customer retention.
+   - Destination-country bank or regulated partner:
+     - Provides local rail access, merchant reach, payout capabilities, and local operating support.
+   - Reseller or market development partner:
+     - Supports corridor development, local distribution, collections, and partner acquisition.
+   - Twynex:
+     - Orchestrates routing, metadata, partner instructions, reconciliation, and reporting.
+     - Coordinates corridor setup and product configuration.
 
-4. Local Wallet Acceptance
-   - Scenario: American tourists use destination-country wallet-like experiences.
-   - Example: wallet payments such as Bizum-style local acceptance.
+4. How It Works For Partners
+   - Step 1: Define corridor and product use case.
+   - Step 2: Confirm US-side partner, destination partner, rail, and customer journey.
+   - Step 3: Configure transaction orchestration, FX metadata, compliance metadata, and reporting needs.
+   - Step 4: Pilot with defined countries, partner accounts, and operating procedures.
+   - Step 5: Expand by corridor, product line, and local rail.
 
-5. Transit And NFC
-   - Scenario: common virtual NFC card for metro or city transit.
-   - Benefit: frictionless mobility payment for travelers.
+5. Operating Model
+   - Partner-bank model.
+   - KYC by regulated partners.
+   - Payment flows through partner-owned accounts where applicable.
+   - Sensitive data stored in partner systems where possible.
+   - Twynex does not claim fiduciary responsibility unless legally reviewed and approved.
 
-6. Local Merchant Acquiring
-   - Scenario: merchants avoid higher cost and risk from international transactions.
-   - Benefit: local acquiring economics with cross-border customer reach.
+6. Partner Economics
+   - KYC charges.
+   - Transaction charges.
+   - FX spread.
+   - Platform fees.
+   - Revenue share.
+   - Partner cross-sell opportunities such as SIM, insurance, visa, travel assistance, and medical tourism where relevant.
 
-### 4. Banks And Issuers
+7. Integration And Reporting
+   - API or embedded partner flow.
+   - Partner routing and local rail connectivity.
+   - Transaction status.
+   - Reconciliation and settlement reporting.
+   - Audit trail and proof of provenance.
 
-Purpose:
+8. Partner FAQ Preview
+   - Who owns the customer relationship?
+   - Who performs KYC?
+   - Which countries are supported first?
+   - What rails can Twynex support?
+   - How are disputes, refunds, and reconciliation handled?
 
-Convert US banks, issuers, fintechs, and regulated partners.
-
-Sections:
-
-1. Hero
-   - "Turn international travel and commerce into a payment relationship advantage."
-
-2. Why Banks Need This
-   - Customers travel globally but payment acceptance remains local.
-   - US payment products lose utility when local QR, wallet, or transit rails dominate.
-   - Building direct local integrations is slow, expensive, and compliance-heavy.
-
-3. What Twynex Provides
-   - Cross-border transaction orchestration.
-   - Local rail access through partner networks.
-   - Regulated partner operating model.
-   - Reconciliation, audit trail, and reporting.
-   - New transaction, FX spread, platform fee, or revenue-share opportunities.
-
-4. Partnership Models
-   - US partner bank.
-   - US card issuer.
-   - International partner bank.
-   - Reseller and market development partner.
-
-5. CTA
+9. CTA
    - "Discuss a partner corridor."
 
-### 5. Travelers And Users
+### 4. `/investors`
 
 Purpose:
 
-Create simple human understanding of why the product matters, even if early distribution is through banks and partners.
-
-Sections:
-
-1. Hero
-   - "Pay abroad like the payment method is local."
-
-2. Pain Points
-   - Cash dependence.
-   - Card acceptance gaps.
-   - Dynamic FX uncertainty.
-   - Local QR and wallet systems that are hard for foreign visitors to use.
-   - Transit and bill payment fragmentation.
-
-3. Experience Vision
-   - Scan local QR.
-   - Pay from US-side relationship.
-   - Merchant receives local payment.
-   - User gets confirmation and transparent transaction status.
-
-4. Early Availability
-   - Make clear that availability will depend on partner banks, countries, and launch corridors.
-
-5. CTA
-   - "Join pilot updates" or "Ask your bank about Twynex."
-
-### 6. Investors
-
-Purpose:
-
-Summarize opportunity, wedge, economics, roadmap, and team.
+Summarize opportunity, wedge, economics, roadmap, fundraise, and team credibility.
 
 Sections:
 
@@ -210,13 +271,13 @@ Sections:
    - FX spread.
    - Platform fees.
    - Revenue share.
-   - Partner cross-sell opportunities such as SIM, insurance, visa, travel assistance, and medical tourism.
+   - Partner cross-sell opportunities.
 
 4. Roadmap And Projections
    - 2026: QR launch.
    - 2027: card launch.
    - 2028-2030: expanded markets and additional use cases.
-   - Show ARR projections visually.
+   - Show ARR projections visually, clearly labeled as projections.
 
 5. Fundraise
    - SAFE through Wefunder Reg D SPV.
@@ -224,41 +285,65 @@ Sections:
    - Planned priced round of USD 5M.
    - Use of funds summary.
 
-6. Team And Advisors
+6. Team And Advisors Preview
    - Condensed credibility biographies.
 
 7. CTA
    - "Request investor materials."
 
-### 7. Compliance And Trust
+### 5. `/trust`
 
 Purpose:
 
-Create confidence for banks, partners, and investors.
+Create confidence for banks, partners, investors, and eventual users.
 
 Sections:
 
 1. Regulated Partner Model
    - Twynex works with banks and regulated entities.
-   - Partner banks own and operate payment accounts and flows.
+   - Partner banks own and operate payment accounts and flows where applicable.
 
-2. KYC And AML
-   - KYC performed by partner banks.
-   - Audit trail and proof of provenance to support AML, OFAC, SAR, and CFT controls.
+2. KYC And AML Support
+   - KYC performed by partner banks or regulated partners.
+   - Audit trail and proof of provenance designed to support AML, OFAC, SAR, and CFT workflows.
 
 3. Data Privacy And Security
    - Sensitive data remains in partner systems where possible.
    - Encryption at rest and in transit.
-   - GDPR and data privacy compliance posture.
+   - Data privacy posture to be reviewed by counsel.
 
 4. Payment Standards
-   - ISO 20022.
+   - ISO 20022 where appropriate.
    - Visa, Mastercard, NFC, and PCI-DSS aligned messaging where relevant.
 
-5. Public Wording Guardrail
+5. Guardrail
    - Use "designed to support" and "aligned with" unless legal counsel approves stronger claims.
 
-### 8. Team
+### 6. `/about`
+
+Purpose:
+
+Explain the company, mission, and origin story without turning the homepage into a corporate brochure.
+
+Sections:
+
+1. Mission
+   - Globalize American payment rails by connecting US-side payment relationships to local rails abroad.
+
+2. Why Now
+   - Domestic payment modernization.
+   - Local rail adoption abroad.
+   - Persistent fragmentation for cross-border local acceptance.
+
+3. Company Focus
+   - Corridor-first execution.
+   - Regulated partner model.
+   - Product lines that solve real payment utility gaps.
+
+4. Location
+   - Twynex, CA USA.
+
+### 7. `/team`
 
 Purpose:
 
@@ -278,7 +363,41 @@ Sections:
 3. Team CTA
    - "Connect with the Twynex team."
 
-### 9. Contact
+### 8. `/faq`
+
+Purpose:
+
+Answer recurring questions for partners, investors, and users without making every page too long.
+
+FAQ categories:
+
+- General
+  - What is Twynex?
+  - Is Twynex a bank?
+  - Is Twynex available to consumers directly?
+
+- Product
+  - What products is Twynex launching first?
+  - Which countries are first?
+  - How does QR payment support work?
+  - How do local cards for travelers work?
+
+- Partners
+  - Who can partner with Twynex?
+  - What roles do US banks, issuers, destination banks, and resellers play?
+  - What does Twynex orchestrate?
+
+- Trust and compliance
+  - Who performs KYC?
+  - Where is sensitive data stored?
+  - What standards is Twynex aligned with?
+
+- Investors
+  - What is the initial market wedge?
+  - What is the revenue model?
+  - How can investors request materials?
+
+### 9. `/contact`
 
 Purpose:
 
@@ -286,10 +405,11 @@ Route inquiries cleanly.
 
 Sections:
 
-1. Contact Options
+1. Inquiry Types
    - Partner inquiry.
    - Investor inquiry.
    - Pilot interest.
+   - General/company inquiry.
 
 2. Contact Details
    - Sudhir Kulkarni.
@@ -297,55 +417,105 @@ Sections:
    - `+1 (408) 464-7982`
    - Twynex, CA USA.
 
-## Navigation Recommendation
+3. Contact Form Fields
+   - Name.
+   - Organization.
+   - Email.
+   - Inquiry type.
+   - Message.
 
-Primary nav:
+### 10. `/terms`
 
-- Platform
-- Use Cases
-- Banks & Issuers
-- Investors
-- Compliance
-- Team
-- Contact
+Purpose:
 
-If the site needs to feel leaner at launch, combine:
+Provide standard website terms of service.
 
-- Banks & Issuers plus Platform.
-- Compliance as a section inside Platform.
-- Team as a section inside Investors.
+Notes:
 
-Minimum launch navigation:
+- Requires legal review before production.
+- Should cover website use, informational nature of content, no financial/legal advice, IP ownership, prohibited use, disclaimers, limitation of liability, governing law, and contact information.
 
-- Platform
-- Use Cases
-- Partners
-- Investors
-- Contact
+### 11. `/privacy`
+
+Purpose:
+
+Explain website privacy practices.
+
+Notes:
+
+- Requires legal review before production.
+- Should cover information collected through forms and analytics, purpose of use, retention, sharing, security, user rights, international access, and contact details.
+
+### 12. `/cookies`
+
+Purpose:
+
+Explain cookies and tracking technologies used on the website.
+
+Notes:
+
+- Requires legal review before production.
+- Should cover essential cookies, analytics cookies, preference cookies, cookie management, and updates to the policy.
 
 ## Homepage Message Hierarchy
 
 1. What Twynex is.
-2. Why the market needs it now.
-3. How the transaction flow works.
-4. Who benefits.
-5. What the first use cases are.
-6. Why the model is bank-compatible.
-7. What comes next.
+2. The core USP: American payment relationships into local payment experiences abroad.
+3. Why the market needs it now.
+4. The first product lines.
+5. A simplified orchestration model.
+6. Who should engage next: partners, investors, users.
+7. Why the model is partner-compatible.
 8. How to start a conversation.
+
+## `/partners` Message Hierarchy
+
+1. What Twynex enables for partners.
+2. Which partner roles exist.
+3. How the corridor operating model works.
+4. What Twynex orchestrates.
+5. What regulated partners own.
+6. What economics are possible.
+7. How onboarding and pilot expansion work.
+8. How to begin a partner discussion.
 
 ## Design Content Blocks To Build
 
 - Global rail map.
+- Product portfolio grid.
 - 5-step transaction flow.
 - Audience pathway selector.
 - Use-case comparison table.
+- Partner role matrix.
+- Partner model diagram.
 - Compliance model diagram.
 - Launch roadmap timeline.
 - ARR projection chart.
-- Partner model diagram.
 - Team credibility grid.
+- FAQ accordion.
 - Contact inquiry form.
+- Footer legal navigation.
+
+## Implementation Phasing
+
+### Phase 1: Foundation
+
+- Keep homepage general and product-led.
+- Update nav to include Products, Partners, Investors, Trust, Contact.
+- Build `/partners`.
+- Add footer links for About, Team, FAQ, Contact, Terms, Privacy, Cookies.
+
+### Phase 2: Core Pages
+
+- Build `/products`.
+- Build `/trust`.
+- Build `/investors`.
+- Build `/about`, `/team`, `/faq`, `/contact`.
+
+### Phase 3: Legal And Policy Drafts
+
+- Add `/terms`, `/privacy`, and `/cookies` as clearly marked draft pages.
+- Replace draft text after legal review.
 
 ## Open Items For Future Work
 
@@ -354,4 +524,6 @@ Minimum launch navigation:
 - Confirm whether investor/fundraise content can be public or should be gated.
 - Confirm exact launch countries for Q4 2026 public copy.
 - Confirm whether "stablecoins" and "deposit tokens" should be prominent on the public site or only used as market-context language.
-- Legal review of compliance, risk, and projected revenue language before publication.
+- Confirm legal entity name and governing jurisdiction for policy pages.
+- Confirm analytics/cookie tooling before finalizing privacy and cookie policy.
+- Legal review of compliance, risk, projected revenue, terms, privacy, and cookie language before publication.
