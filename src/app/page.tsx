@@ -10,7 +10,6 @@ import { InfoCard } from "@/components/ui/info-card";
 import { Metric } from "@/components/ui/metric";
 import { CorridorConsole } from "@/components/twynex/corridor-console";
 import { ProcessSteps } from "@/components/twynex/process-steps";
-import { Roadmap } from "@/components/twynex/roadmap";
 import {
   contact,
   faqGroups,
@@ -19,7 +18,6 @@ import {
   metrics,
   partnerTypes,
   problemPoints,
-  roadmap,
   serviceModules,
   trustPoints,
   whatTwynexDoes,
@@ -201,24 +199,6 @@ export default function Home() {
               </StaggerItem>
             ))}
           </Stagger>
-        </div>
-      </Section>
-
-      <Section id="roadmap" tone="dark">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <Eyebrow tone="mint">Roadmap</Eyebrow>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              A corridor-first path from QR payments to broader local acceptance.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-panel-muted">
-              The public story is product-led: prove American payment relationships
-              can connect into local international payment experiences, then expand.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <Roadmap items={roadmap} />
-          </Reveal>
         </div>
       </Section>
 

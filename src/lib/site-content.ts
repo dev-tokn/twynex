@@ -108,12 +108,6 @@ export const trustPoints = [
   "ISO 20022 and payment-network aligned messaging where appropriate",
 ];
 
-export const roadmap = [
-  { date: "Q4 2026", label: "Cross-border QR payments" },
-  { date: "Q1 2027", label: "Local cards for business travelers" },
-  { date: "2028+", label: "Wallets, transit, bill pay, and merchant acquiring" },
-];
-
 export const partnerOutcomes = [
   "Extend customer utility abroad",
   "Create new international transaction revenue",
