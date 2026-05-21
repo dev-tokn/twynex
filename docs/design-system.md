@@ -89,12 +89,9 @@ Each future page should follow the same structure:
 Recommended page types:
 
 - Home: general USP, product overview, simplified orchestration, audience routing
-- Products: product portfolio, use-case details, comparison table
 - Partners: partner outcomes, role matrix, operating model, onboarding flow
-- Investors: market thesis, wedge, economics, roadmap
 - Trust: regulated partner model, data posture, standards
 - About: company mission and why now
-- Team: leadership/advisors grid
-- FAQ: categorized accordion for general, product, partner, trust, and investor questions
+- FAQ: categorized accordion for general, offering, partner, trust, and investor questions
 - Contact: inquiry routing
 - Legal pages: terms, privacy, and cookie policy drafts pending legal review

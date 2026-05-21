@@ -4,11 +4,15 @@ This document defines the revised website organization, page responsibilities, n
 
 ## Core Site Strategy
 
-The website should separate the general market story from partner-specific conversion.
+The website is about Twynex as a company and its product/service offering. The reference deck was investor-oriented, but the public website should not feel like an investor deck.
 
-- The landing page is the general public entry point. It should explain the Twynex USP, the problem, the product lines, and why now.
-- `/partners` is the dedicated partner page. It should explain what Twynex does for banks, issuers, destination-country partners, resellers, and market partners, including their roles and how the operating model works.
-- Company, team, FAQ, contact, and legal pages should exist as standard site infrastructure instead of being squeezed into the homepage.
+Key decisions:
+
+- Do not create standalone `/products` or `/investors` pages for now.
+- Treat product lines as service modules inside the homepage and partner narrative.
+- Keep `/partners` as the main deep-dive conversion page.
+- Keep investor inquiry as a secondary contact path, not a primary public route.
+- Keep company, FAQ, contact, and legal pages as standard website infrastructure.
 
 ## Primary Positioning
 
@@ -24,18 +28,12 @@ Twynex is not a generic remittance, FX, or multicurrency account product. The we
 
 ## Recommended Site Map
 
-### Core Product And Conversion Pages
+### Main Pages
 
 - `/` Home
-- `/products`
 - `/partners`
-- `/investors`
 - `/trust`
-
-### Company And Support Pages
-
 - `/about`
-- `/team`
 - `/faq`
 - `/contact`
 
@@ -49,32 +47,28 @@ Twynex is not a generic remittance, FX, or multicurrency account product. The we
 
 Primary nav:
 
-- Products
+- Offering
 - Partners
-- Investors
 - Trust
-- Company
-
-Company dropdown or footer grouping:
-
 - About
-- Team
 - FAQ
 - Contact
 
-Footer legal:
+Footer company links:
+
+- About
+- FAQ
+- Contact
+
+Footer legal links:
 
 - Terms of Service
 - Privacy Policy
 - Cookie Policy
 
-Launch-minimum nav:
+Footer secondary inquiry link:
 
-- Products
-- Partners
-- Investors
-- Trust
-- Contact
+- Investor inquiries, routed to `/contact`
 
 ## Page Plans
 
@@ -82,17 +76,17 @@ Launch-minimum nav:
 
 Purpose:
 
-Introduce Twynex, establish the core USP, explain the initial product lines at a high level, and route visitors into partners, investors, or contact.
+Introduce Twynex as a company, explain the core USP, summarize the product/service offering, and route visitors to partners, trust, FAQ, or contact.
 
-Homepage should not try to explain every partner role in detail. That belongs on `/partners`.
+The homepage should be product-led but not split into separate product pages yet. Product lines should be presented as service modules under the Twynex offering.
 
 Sections:
 
 1. Hero
    - Headline: "Globalizing America's Payment Rails"
    - Supporting copy: Twynex helps US banks, issuers, and regulated partners connect American customers to local payment rails abroad.
-   - Primary CTA: "Explore partner models"
-   - Secondary CTA: "View products"
+   - Primary CTA: "Explore the offering"
+   - Secondary CTA: "Partner with Twynex"
 
 2. Market Problem
    - Domestic rails are modernizing.
@@ -100,80 +94,57 @@ Sections:
    - Local rails abroad are increasingly dominant.
    - American customers still face cash, card acceptance, QR, wallet, FX, transit, and merchant-payment friction.
 
-3. Twynex USP
+3. What Twynex Does
    - Cross-border transaction orchestration.
    - American payment relationships into local international payment experiences.
    - Partner-led regulated operating model.
-   - Designed for corridor-by-corridor expansion.
+   - Corridor-by-corridor rollout.
 
-4. Product Overview
+4. Service Offering Modules
    - Cross-border QR payments.
    - Local cards for business travelers.
-   - Future products: immigrant bill payments, wallet acceptance, transit/NFC, local merchant acquiring.
+   - Immigrant bill payments.
+   - Local wallet acceptance.
+   - Transit/NFC virtual card.
+   - Local merchant acquiring.
 
-5. How It Works, Simplified
+5. Initial Product Focus
+   - Cross-border QR payments:
+     - American tourist scans a local QR code abroad.
+     - Customer pays through a familiar US-side relationship.
+     - Merchant receives through local rails.
+     - Launch target: Q4 2026.
+   - Local cards for business travelers:
+     - Card products for international travel and business use.
+     - Initial markets: India and Malaysia.
+     - Launch target: Q1 2027.
+
+6. How It Works, Simplified
    - Customer starts from a US-side relationship.
    - Twynex coordinates routing, partner instructions, FX metadata, compliance metadata, and reconciliation.
    - Regulated partners process flows.
    - Destination rail completes local acceptance.
 
-6. Audience Routing
-   - Partners: banks, issuers, local partners, resellers.
-   - Investors: wedge, roadmap, economics.
-   - Users/travelers: product vision and availability through partner corridors.
+7. Who We Work With
+   - US banks.
+   - Card issuers.
+   - Destination-country banks and regulated partners.
+   - Resellers and market development partners.
 
-7. Trust Preview
+8. Trust Preview
    - Partner-bank model.
    - KYC by regulated partners.
    - Sensitive data kept in partner systems where possible.
    - Audit trail designed to support AML, OFAC, SAR, and CFT workflows.
 
-8. Final CTA
+9. Company Credibility Preview
+   - Leadership and advisors bring payments, banking, product, and cross-border experience.
+   - Link to `/about`.
+
+10. Final CTA
    - "Build the next cross-border payment corridor with Twynex."
 
-### 2. `/products`
-
-Purpose:
-
-Make Twynex concrete. Explain the product portfolio without overwhelming the homepage.
-
-Sections:
-
-1. Product Portfolio Hero
-   - "Local payment experiences for American customers abroad."
-
-2. Cross-Border QR Payments
-   - American tourist scans a local QR code abroad.
-   - Customer pays through a familiar US-side relationship.
-   - Merchant receives through local rails.
-   - Launch target: Q4 2026.
-   - Initial rollout: 3 Southeast Asia countries.
-   - 2030 ARR projection from deck: approximately USD 24.48M.
-
-3. Local Cards For Business Travelers
-   - Card products for international travel and business use.
-   - Initial markets: India and Malaysia.
-   - Launch target: Q1 2027.
-   - 2030 ARR projection from deck: approximately USD 23.15M.
-
-4. Future Product Lines
-   - Immigrant bill payments.
-   - Local wallet payments.
-   - Transit/NFC virtual card.
-   - Local merchant acquiring.
-
-5. Product Comparison Table
-   - User problem.
-   - Partner role.
-   - Destination rail.
-   - Initial markets.
-   - Revenue model.
-   - Launch status.
-
-6. CTA
-   - "Discuss the right corridor or product line."
-
-### 3. `/partners`
+### 2. `/partners`
 
 Purpose:
 
@@ -210,11 +181,11 @@ Sections:
      - Coordinates corridor setup and product configuration.
 
 4. How It Works For Partners
-   - Step 1: Define corridor and product use case.
+   - Step 1: Define corridor and service module.
    - Step 2: Confirm US-side partner, destination partner, rail, and customer journey.
    - Step 3: Configure transaction orchestration, FX metadata, compliance metadata, and reporting needs.
    - Step 4: Pilot with defined countries, partner accounts, and operating procedures.
-   - Step 5: Expand by corridor, product line, and local rail.
+   - Step 5: Expand by corridor, service module, and local rail.
 
 5. Operating Model
    - Partner-bank model.
@@ -248,50 +219,7 @@ Sections:
 9. CTA
    - "Discuss a partner corridor."
 
-### 4. `/investors`
-
-Purpose:
-
-Summarize opportunity, wedge, economics, roadmap, fundraise, and team credibility.
-
-Sections:
-
-1. Market Thesis
-   - Domestic rails are modernizing.
-   - Cross-border local acceptance remains fragmented.
-   - Travelers, banks, merchants, and local partners need a bridge.
-
-2. Initial Wedge
-   - Cross-border QR payments for American tourists.
-   - Local cards for business travelers.
-
-3. Business Model
-   - KYC charges.
-   - Transaction charges.
-   - FX spread.
-   - Platform fees.
-   - Revenue share.
-   - Partner cross-sell opportunities.
-
-4. Roadmap And Projections
-   - 2026: QR launch.
-   - 2027: card launch.
-   - 2028-2030: expanded markets and additional use cases.
-   - Show ARR projections visually, clearly labeled as projections.
-
-5. Fundraise
-   - SAFE through Wefunder Reg D SPV.
-   - USD 2.5M target raise, USD 1M minimum.
-   - Planned priced round of USD 5M.
-   - Use of funds summary.
-
-6. Team And Advisors Preview
-   - Condensed credibility biographies.
-
-7. CTA
-   - "Request investor materials."
-
-### 5. `/trust`
+### 3. `/trust`
 
 Purpose:
 
@@ -319,11 +247,11 @@ Sections:
 5. Guardrail
    - Use "designed to support" and "aligned with" unless legal counsel approves stronger claims.
 
-### 6. `/about`
+### 4. `/about`
 
 Purpose:
 
-Explain the company, mission, and origin story without turning the homepage into a corporate brochure.
+Explain the company, mission, why now, and execution credibility without turning the homepage into a corporate brochure.
 
 Sections:
 
@@ -338,36 +266,23 @@ Sections:
 3. Company Focus
    - Corridor-first execution.
    - Regulated partner model.
-   - Product lines that solve real payment utility gaps.
+   - Service modules that solve real payment utility gaps.
 
-4. Location
-   - Twynex, CA USA.
-
-### 7. `/team`
-
-Purpose:
-
-Build execution credibility.
-
-Sections:
-
-1. Founders And Leadership
+4. Team And Advisors
    - Sudhir Kulkarni.
    - Alok Arora.
-
-2. Advisors
    - Bipin Sahni.
    - Jagdeep Singh Sahota.
    - David Black.
 
-3. Team CTA
-   - "Connect with the Twynex team."
+5. Location
+   - Twynex, CA USA.
 
-### 8. `/faq`
+### 5. `/faq`
 
 Purpose:
 
-Answer recurring questions for partners, investors, and users without making every page too long.
+Answer recurring questions for partners, users, investors, and general visitors without making every page too long.
 
 FAQ categories:
 
@@ -376,8 +291,9 @@ FAQ categories:
   - Is Twynex a bank?
   - Is Twynex available to consumers directly?
 
-- Product
-  - What products is Twynex launching first?
+- Offering
+  - What service modules is Twynex developing?
+  - Which service modules are first?
   - Which countries are first?
   - How does QR payment support work?
   - How do local cards for travelers work?
@@ -393,11 +309,10 @@ FAQ categories:
   - What standards is Twynex aligned with?
 
 - Investors
-  - What is the initial market wedge?
-  - What is the revenue model?
-  - How can investors request materials?
+  - Is Twynex currently sharing investor materials?
+  - How can investors request information?
 
-### 9. `/contact`
+### 6. `/contact`
 
 Purpose:
 
@@ -407,8 +322,8 @@ Sections:
 
 1. Inquiry Types
    - Partner inquiry.
-   - Investor inquiry.
    - Pilot interest.
+   - Investor inquiry.
    - General/company inquiry.
 
 2. Contact Details
@@ -424,7 +339,7 @@ Sections:
    - Inquiry type.
    - Message.
 
-### 10. `/terms`
+### 7. `/terms`
 
 Purpose:
 
@@ -435,7 +350,7 @@ Notes:
 - Requires legal review before production.
 - Should cover website use, informational nature of content, no financial/legal advice, IP ownership, prohibited use, disclaimers, limitation of liability, governing law, and contact information.
 
-### 11. `/privacy`
+### 8. `/privacy`
 
 Purpose:
 
@@ -446,7 +361,7 @@ Notes:
 - Requires legal review before production.
 - Should cover information collected through forms and analytics, purpose of use, retention, sharing, security, user rights, international access, and contact details.
 
-### 12. `/cookies`
+### 9. `/cookies`
 
 Purpose:
 
@@ -462,11 +377,12 @@ Notes:
 1. What Twynex is.
 2. The core USP: American payment relationships into local payment experiences abroad.
 3. Why the market needs it now.
-4. The first product lines.
-5. A simplified orchestration model.
-6. Who should engage next: partners, investors, users.
-7. Why the model is partner-compatible.
-8. How to start a conversation.
+4. The service offering modules.
+5. Initial product/service focus.
+6. A simplified orchestration model.
+7. Who Twynex works with.
+8. Why the model is partner-compatible.
+9. How to start a conversation.
 
 ## `/partners` Message Hierarchy
 
@@ -482,7 +398,7 @@ Notes:
 ## Design Content Blocks To Build
 
 - Global rail map.
-- Product portfolio grid.
+- Service offering module grid.
 - 5-step transaction flow.
 - Audience pathway selector.
 - Use-case comparison table.
@@ -490,7 +406,6 @@ Notes:
 - Partner model diagram.
 - Compliance model diagram.
 - Launch roadmap timeline.
-- ARR projection chart.
 - Team credibility grid.
 - FAQ accordion.
 - Contact inquiry form.
@@ -500,17 +415,17 @@ Notes:
 
 ### Phase 1: Foundation
 
-- Keep homepage general and product-led.
-- Update nav to include Products, Partners, Investors, Trust, Contact.
+- Keep homepage general and offering-led.
+- Update nav to include Offering, Partners, Trust, About, FAQ, Contact.
 - Build `/partners`.
-- Add footer links for About, Team, FAQ, Contact, Terms, Privacy, Cookies.
+- Add footer links for About, FAQ, Contact, Terms, Privacy, Cookies.
 
 ### Phase 2: Core Pages
 
-- Build `/products`.
 - Build `/trust`.
-- Build `/investors`.
-- Build `/about`, `/team`, `/faq`, `/contact`.
+- Build `/about`.
+- Build `/faq`.
+- Build `/contact`.
 
 ### Phase 3: Legal And Policy Drafts
 
@@ -521,8 +436,8 @@ Notes:
 
 - Confirm final public brand name spelling: Twynex vs any alternate legal/brand spelling.
 - Confirm logo, domain, brand colors, and any existing brand assets.
-- Confirm whether investor/fundraise content can be public or should be gated.
 - Confirm exact launch countries for Q4 2026 public copy.
+- Confirm whether investor/fundraise content should remain contact-only or eventually become gated.
 - Confirm whether "stablecoins" and "deposit tokens" should be prominent on the public site or only used as market-context language.
 - Confirm legal entity name and governing jurisdiction for policy pages.
 - Confirm analytics/cookie tooling before finalizing privacy and cookie policy.
