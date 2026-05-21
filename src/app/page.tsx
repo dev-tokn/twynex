@@ -1,6 +1,9 @@
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Section } from "@/components/layout/section";
+import { Reveal } from "@/components/motion/reveal";
+import { Stagger, StaggerItem } from "@/components/motion/stagger";
+import { MotionCard } from "@/components/motion/motion-card";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { InfoCard } from "@/components/ui/info-card";
@@ -9,14 +12,16 @@ import { CorridorConsole } from "@/components/twynex/corridor-console";
 import { ProcessSteps } from "@/components/twynex/process-steps";
 import { Roadmap } from "@/components/twynex/roadmap";
 import {
-  audiencePaths,
   contact,
   flowSteps,
+  initialFocus,
   metrics,
+  partnerTypes,
   problemPoints,
   roadmap,
+  serviceModules,
   trustPoints,
-  useCases,
+  whatTwynexDoes,
 } from "@/lib/site-content";
 
 export default function Home() {
@@ -26,7 +31,7 @@ export default function Home() {
 
       <section id="home" className="overflow-hidden border-b border-border bg-background">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-24">
-          <div className="flex flex-col justify-center">
+          <Reveal className="flex flex-col justify-center">
             <Eyebrow className="mb-5">Cross-border transaction orchestration</Eyebrow>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">
               Globalizing America&apos;s Payment Rails
@@ -36,14 +41,9 @@ export default function Home() {
               American customers to local payment rails abroad.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="mailto:sudhir@twynex.com?subject=Twynex%20partner%20inquiry">
+              <Button href="#offering">Explore the offering</Button>
+              <Button href="/partners" variant="secondary">
                 Partner with Twynex
-              </Button>
-              <Button
-                href="mailto:sudhir@twynex.com?subject=Twynex%20investor%20inquiry"
-                variant="secondary"
-              >
-                Investor inquiry
               </Button>
             </div>
             <div className="mt-10 grid gap-4 border-t border-border pt-8 sm:grid-cols-3">
@@ -51,144 +51,201 @@ export default function Home() {
                 <Metric key={metric.label} {...metric} />
               ))}
             </div>
-          </div>
+          </Reveal>
 
-          <CorridorConsole />
+          <Reveal delay={0.1}>
+            <CorridorConsole />
+          </Reveal>
         </div>
       </section>
 
-      <Section id="platform" tone="sand">
+      <Section id="problem" tone="sand">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+          <Reveal>
             <Eyebrow tone="red">The problem</Eyebrow>
             <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight">
-              Domestic rails are modernizing. Cross-border acceptance is still fragmented.
+              Domestic rails are modernizing. Cross-border acceptance remains fragmented.
             </h2>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          </Reveal>
+          <Stagger className="grid gap-4 sm:grid-cols-2">
             {problemPoints.map((item) => (
-              <InfoCard key={item} className="p-5">
+              <StaggerItem key={item}>
+                <InfoCard className="h-full p-5">
+                  <p className="text-base leading-7 text-muted-foreground">{item}</p>
+                </InfoCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </Section>
+
+      <Section id="offering" tone="cream">
+        <Reveal>
+          <Eyebrow>What Twynex does</Eyebrow>
+          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
+            American payment relationships into local international payment experiences.
+          </h2>
+        </Reveal>
+        <Stagger className="mt-9 grid gap-4 lg:grid-cols-4">
+          {whatTwynexDoes.map((item) => (
+            <StaggerItem key={item}>
+              <InfoCard className="h-full p-5">
                 <p className="text-base leading-7 text-muted-foreground">{item}</p>
               </InfoCard>
-            ))}
-          </div>
-        </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
 
-        <div className="mt-14 rounded-lg bg-panel p-6 text-panel-foreground sm:p-8">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-            <div>
-              <Eyebrow tone="mint">How Twynex works</Eyebrow>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight">
-                Orchestration between US-side relationships and destination-country rails.
-              </h2>
-            </div>
-            <ProcessSteps steps={flowSteps} />
-          </div>
-        </div>
-      </Section>
-
-      <Section id="partners" tone="cream">
-        <div className="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
-          <div>
-            <Eyebrow>Audience paths</Eyebrow>
-            <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight">
-              One platform wedge, three clear routes into the market.
+        <div className="mt-14">
+          <Reveal>
+            <Eyebrow tone="red">Service modules</Eyebrow>
+            <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
+              Product lines stay inside one partner-led orchestration offering.
             </h2>
-          </div>
-          <Button
-            href="mailto:sudhir@twynex.com?subject=Twynex%20corridor%20discussion"
-            variant="secondary"
-          >
-            Discuss a partner corridor
-          </Button>
-        </div>
-        <div className="grid gap-4 lg:grid-cols-3">
-          {audiencePaths.map((path) => (
-            <InfoCard key={path.label} eyebrow={path.label} title={path.title}>
-              <p className="text-base leading-7 text-muted-foreground">{path.copy}</p>
-            </InfoCard>
-          ))}
+          </Reveal>
+          <Stagger className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {serviceModules.map((module) => (
+              <StaggerItem key={module.title}>
+                <MotionCard className="h-full">
+                  <InfoCard className="h-full" title={module.title}>
+                    <p className="text-base leading-7 text-muted-foreground">{module.copy}</p>
+                  </InfoCard>
+                </MotionCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
       </Section>
 
-      <Section id="use-cases" tone="sand">
-        <Eyebrow tone="red">Initial use cases</Eyebrow>
-        <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-          Start where payment acceptance is visibly local and operationally hard.
-        </h2>
-        <div className="mt-9 grid gap-4 lg:grid-cols-3">
-          {useCases.map((useCase) => (
-            <InfoCard key={useCase.title}>
-              <p className="text-sm font-semibold text-accent">{useCase.launch}</p>
-              <h3 className="mt-4 text-2xl font-semibold">{useCase.title}</h3>
-              <p className="mt-3 text-sm font-medium text-subtle-foreground">{useCase.markets}</p>
-              <p className="mt-5 text-base leading-7 text-muted-foreground">{useCase.copy}</p>
-            </InfoCard>
+      <Section id="focus" tone="sand">
+        <Reveal>
+          <Eyebrow tone="red">Initial focus</Eyebrow>
+          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
+            Start where local acceptance is visible, frequent, and operationally hard.
+          </h2>
+        </Reveal>
+        <Stagger className="mt-9 grid gap-4 lg:grid-cols-2">
+          {initialFocus.map((useCase) => (
+            <StaggerItem key={useCase.title}>
+              <InfoCard className="h-full">
+                <p className="text-sm font-semibold text-accent">{useCase.launch}</p>
+                <h3 className="mt-4 text-2xl font-semibold">{useCase.title}</h3>
+                <p className="mt-3 text-sm font-medium text-subtle-foreground">{useCase.markets}</p>
+                <p className="mt-5 text-base leading-7 text-muted-foreground">{useCase.copy}</p>
+              </InfoCard>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Section>
 
-      <Section id="trust" tone="white">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div>
-            <Eyebrow>Compliance and trust</Eyebrow>
+      <Section id="how-it-works" tone="dark">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <Reveal>
+            <Eyebrow tone="mint">How it works</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              Designed around regulated partners, auditability, and conservative public claims.
+              A simplified corridor model for regulated partner participation.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-panel-muted">
+              Twynex coordinates orchestration while banks, issuers, and local regulated
+              partners own the applicable regulated flows.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <ProcessSteps steps={flowSteps} />
+          </Reveal>
+        </div>
+      </Section>
+
+      <Section id="partners-preview" tone="white">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <Reveal>
+            <Eyebrow>Who we work with</Eyebrow>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight">
+              Built for banks, issuers, and regulated partners that want corridor reach.
+            </h2>
+            <Button href="/partners" variant="secondary" className="mt-7 inline-block">
+              Explore partner models
+            </Button>
+          </Reveal>
+          <Stagger className="grid gap-4 sm:grid-cols-2">
+            {partnerTypes.map((item) => (
+              <StaggerItem key={item}>
+                <InfoCard className="h-full p-5">
+                  <p className="text-base font-medium leading-7">{item}</p>
+                </InfoCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </Section>
+
+      <Section id="trust-preview" tone="cream">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <Reveal>
+            <Eyebrow>Trust preview</Eyebrow>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight">
+              Designed around regulated partners, auditability, and conservative claims.
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted-foreground">
               Twynex is positioned around a partner-bank model where regulated
-              partners perform KYC and operate payment accounts and flows.
+              partners perform KYC and operate payment accounts and flows where applicable.
             </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {trustPoints.map((item) => (
-              <InfoCard key={item} className="bg-background p-5">
-                <p className="text-base font-medium leading-7">{item}</p>
-              </InfoCard>
+            <Button href="/trust" variant="secondary" className="mt-7 inline-block">
+              View trust posture
+            </Button>
+          </Reveal>
+          <Stagger className="grid gap-4 sm:grid-cols-2">
+            {trustPoints.slice(0, 4).map((item) => (
+              <StaggerItem key={item}>
+                <InfoCard className="h-full bg-background p-5">
+                  <p className="text-base font-medium leading-7">{item}</p>
+                </InfoCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </Section>
 
-      <Section id="investors" tone="dark">
+      <Section id="roadmap" tone="dark">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+          <Reveal>
             <Eyebrow tone="mint">Roadmap</Eyebrow>
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
               A corridor-first path from QR payments to broader local acceptance.
             </h2>
             <p className="mt-5 text-lg leading-8 text-panel-muted">
-              The investor story is a focused wedge: American payment rails
-              into local international payment experiences, then repeatable
-              partner corridors.
+              The public story is product-led: prove American payment relationships
+              can connect into local international payment experiences, then expand.
             </p>
-          </div>
-          <Roadmap items={roadmap} />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Roadmap items={roadmap} />
+          </Reveal>
         </div>
       </Section>
 
       <section id="contact" className="bg-background">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <Reveal className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <Eyebrow tone="red">Start a conversation</Eyebrow>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
                 Build the next cross-border payment corridor with Twynex.
               </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-                For partner, investor, or pilot inquiries, contact Sudhir Kulkarni
-                and the Twynex team.
+                For partner, pilot, investor, or company inquiries, contact Sudhir
+                Kulkarni and the Twynex team.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Button href={`mailto:${contact.email}`} variant="inverse">
+              <Button href="/contact" variant="inverse">
+                Contact Twynex
+              </Button>
+              <Button href={`mailto:${contact.email}`} variant="secondary">
                 {contact.email}
               </Button>
-              <Button href={contact.phoneHref} variant="secondary">
-                {contact.phone}
-              </Button>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
