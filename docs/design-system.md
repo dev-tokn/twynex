@@ -77,6 +77,21 @@ Content source:
 
 - `src/lib/site-content.ts`
 
+Motion components:
+
+- `Reveal`
+- `Stagger`
+- `StaggerItem`
+- `MotionCard`
+
+Animation guidance:
+
+- Use Motion for React through reusable primitives in `src/components/motion`.
+- Keep animation subtle: small opacity/translate reveals, restrained card hover lift, and light staggered entrances.
+- Respect reduced-motion preferences.
+- Avoid scroll hijacking, splashy hero choreography, and constant decorative motion.
+- Use GSAP only if a future rail-map or SVG/canvas sequence requires timeline-level choreography.
+
 ## Page Template Pattern
 
 Each future page should follow the same structure:
