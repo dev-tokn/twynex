@@ -1,3 +1,4 @@
+import { withBasePath } from "@/lib/paths";
 import { contact, footerCompanyLinks, footerLegalLinks } from "@/lib/site-content";
 
 export function SiteFooter() {
@@ -15,7 +16,7 @@ export function SiteFooter() {
           <p className="font-semibold text-panel-foreground">Company</p>
           <div className="mt-3 grid gap-2">
             {footerCompanyLinks.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-panel-foreground">
+              <a key={item.href} href={withBasePath(item.href)} className="hover:text-panel-foreground">
                 {item.label}
               </a>
             ))}
@@ -25,7 +26,7 @@ export function SiteFooter() {
           <p className="font-semibold text-panel-foreground">Legal</p>
           <div className="mt-3 grid gap-2">
             {footerLegalLinks.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-panel-foreground">
+              <a key={item.href} href={withBasePath(item.href)} className="hover:text-panel-foreground">
                 {item.label}
               </a>
             ))}

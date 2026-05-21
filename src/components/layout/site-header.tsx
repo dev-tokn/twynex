@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/paths";
 import { navItems } from "@/lib/site-content";
 
 export function SiteHeader() {
@@ -14,7 +15,7 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-muted-foreground lg:flex">
           {navItems.map((item) => (
-            <a key={item.href} className="hover:text-foreground" href={item.href}>
+            <a key={item.href} className="hover:text-foreground" href={withBasePath(item.href)}>
               {item.label}
             </a>
           ))}

@@ -1,4 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
+import { withBasePath } from "@/lib/paths";
 
 type ButtonProps = ComponentPropsWithoutRef<"a"> & {
   variant?: "primary" | "secondary" | "inverse";
@@ -14,11 +15,13 @@ const variants = {
 export function Button({
   className = "",
   variant = "primary",
+  href,
   ...props
 }: ButtonProps) {
   return (
     <a
       className={`rounded-lg px-5 py-3 text-center text-sm font-semibold transition ${variants[variant]} ${className}`}
+      href={withBasePath(href)}
       {...props}
     />
   );
