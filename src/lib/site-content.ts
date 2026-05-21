@@ -1,7 +1,6 @@
 export const navItems = [
   { label: "Partners", href: "/partners" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const footerCompanyLinks = [
