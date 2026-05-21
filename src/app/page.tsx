@@ -14,7 +14,6 @@ import {
   contact,
   faqGroups,
   flowSteps,
-  initialFocus,
   metrics,
   partnerTypes,
   problemPoints,
@@ -138,27 +137,6 @@ export default function Home() {
             ))}
           </Stagger>
         </div>
-      </Section>
-
-      <Section id="focus" tone="sand">
-        <Reveal>
-          <Eyebrow tone="red">Initial focus</Eyebrow>
-          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-            Start where local acceptance is visible, frequent, and operationally hard.
-          </h2>
-        </Reveal>
-        <Stagger className="mt-9 grid gap-4 lg:grid-cols-2">
-          {initialFocus.map((useCase) => (
-            <StaggerItem key={useCase.title}>
-              <InfoCard className="h-full">
-                <p className="text-sm font-semibold text-accent">{useCase.launch}</p>
-                <h3 className="mt-4 text-2xl font-semibold">{useCase.title}</h3>
-                <p className="mt-3 text-sm font-medium text-subtle-foreground">{useCase.markets}</p>
-                <p className="mt-5 text-base leading-7 text-muted-foreground">{useCase.copy}</p>
-              </InfoCard>
-            </StaggerItem>
-          ))}
-        </Stagger>
       </Section>
 
       <Section id="how-it-works" tone="dark">
