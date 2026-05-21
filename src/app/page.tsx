@@ -75,6 +75,24 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section id="how-it-works" tone="dark">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <Reveal>
+            <Eyebrow tone="mint">How it works</Eyebrow>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight">
+              A simplified corridor model for regulated partner participation.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-panel-muted">
+              Twynex coordinates orchestration while banks, issuers, and local regulated
+              partners own the applicable regulated flows.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <ProcessSteps steps={flowSteps} />
+          </Reveal>
+        </div>
+      </Section>
+
       <Section id="offering" tone="cream">
         <Reveal>
           <Eyebrow>What Twynex does</Eyebrow>
@@ -114,24 +132,6 @@ export default function Home() {
               </StaggerItem>
             ))}
           </Stagger>
-        </div>
-      </Section>
-
-      <Section id="how-it-works" tone="dark">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <Reveal>
-            <Eyebrow tone="mint">How it works</Eyebrow>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              A simplified corridor model for regulated partner participation.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-panel-muted">
-              Twynex coordinates orchestration while banks, issuers, and local regulated
-              partners own the applicable regulated flows.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <ProcessSteps steps={flowSteps} />
-          </Reveal>
         </div>
       </Section>
 
