@@ -13,6 +13,7 @@ import { ProcessSteps } from "@/components/twynex/process-steps";
 import { Roadmap } from "@/components/twynex/roadmap";
 import {
   contact,
+  faqGroups,
   flowSteps,
   initialFocus,
   metrics,
@@ -245,6 +246,34 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <Section id="faq" tone="cream">
+        <Reveal>
+          <Eyebrow>FAQ</Eyebrow>
+          <h2 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight">
+            Common questions about Twynex, partners, and trust.
+          </h2>
+        </Reveal>
+        <div className="mt-12 grid gap-6">
+          {faqGroups.map((group) => (
+            <InfoCard key={group.category} title={group.category}>
+              <div className="grid gap-5">
+                {group.items.map((item) => (
+                  <div
+                    key={item.question}
+                    className="border-t border-border pt-5 first:border-t-0 first:pt-0"
+                  >
+                    <h3 className="text-lg font-semibold">{item.question}</h3>
+                    <p className="mt-2 text-base leading-7 text-muted-foreground">
+                      {item.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </InfoCard>
+          ))}
+        </div>
+      </Section>
 
       <SiteFooter />
     </main>

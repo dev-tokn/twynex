@@ -131,7 +131,7 @@ export default function PartnersPage() {
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
               Early partner conversations usually start with ownership, rails, and operations.
             </h2>
-            <Button href="/faq" variant="secondary" className="mt-7 inline-block">
+            <Button href="/#faq" variant="secondary" className="mt-7 inline-block">
               Read FAQ
             </Button>
           </Reveal>

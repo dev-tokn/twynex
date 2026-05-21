@@ -1,13 +1,11 @@
 export const navItems = [
   { label: "Partners", href: "/partners" },
   { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerCompanyLinks = [
   { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
   { label: "Investor inquiries", href: "/contact?inquiry=investor" },
 ];
