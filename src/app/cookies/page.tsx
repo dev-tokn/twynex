@@ -7,7 +7,7 @@ import { contact } from "@/lib/site-content";
 
 export default function CookiesPage() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <main id="main-content" className="min-h-screen bg-surface text-foreground">
       <SiteHeader />
       <Section tone="cream">
         <Eyebrow>Cookies</Eyebrow>

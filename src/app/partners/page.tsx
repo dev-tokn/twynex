@@ -3,9 +3,11 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { InfoCard } from "@/components/ui/info-card";
+import { PartnerOperatingModel } from "@/components/twynex/partner-operating-model";
 import { ProcessSteps } from "@/components/twynex/process-steps";
 import {
   partnerEconomics,
@@ -17,13 +19,17 @@ import {
 
 export default function PartnersPage() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <main id="main-content" className="min-h-screen bg-surface text-foreground">
       <SiteHeader />
 
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+      <section className="relative overflow-hidden border-b border-border bg-background">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[linear-gradient(135deg,rgb(8_120_101_/_10%),transparent_42%)]" />
+        <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
           <Reveal className="max-w-4xl">
-            <Eyebrow>Partner corridors</Eyebrow>
+            <div className="mb-5 flex flex-wrap gap-2">
+              <Badge tone="accent">Partner corridors</Badge>
+              <Badge>US-side to destination-side operating model</Badge>
+            </div>
             <h1 className="mt-5 text-5xl font-semibold leading-[1.04] sm:text-6xl">
               Launch local payment corridors without rebuilding every rail from scratch.
             </h1>
@@ -47,12 +53,12 @@ export default function PartnersPage() {
               Keep customers active abroad while creating new corridor economics.
             </h2>
           </Reveal>
-          <Stagger className="grid gap-4 sm:grid-cols-2">
+          <Stagger className="grid gap-3 sm:grid-cols-2">
             {partnerOutcomes.map((outcome) => (
               <StaggerItem key={outcome}>
-                <InfoCard className="h-full p-5">
+                <div className="h-full rounded-lg border border-border bg-card p-5 shadow-sm">
                   <p className="text-base leading-7 text-muted-foreground">{outcome}</p>
-                </InfoCard>
+                </div>
               </StaggerItem>
             ))}
           </Stagger>
@@ -60,18 +66,34 @@ export default function PartnersPage() {
       </Section>
 
       <Section tone="cream">
-        <Reveal>
-          <Eyebrow>Partner role matrix</Eyebrow>
-          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
-            Clear responsibilities across US-side, destination-side, and orchestration roles.
-          </h2>
-        </Reveal>
-        <Stagger className="mt-9 grid gap-4 lg:grid-cols-5">
-          {partnerRoles.map((item) => (
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <Reveal>
+            <Eyebrow>Partner role matrix</Eyebrow>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight">
+              Clear responsibilities across US-side, destination-side, and orchestration roles.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-muted-foreground">
+              Twynex is positioned as the corridor operating layer while regulated
+              partners retain ownership of applicable financial flows.
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <PartnerOperatingModel />
+          </Reveal>
+        </div>
+        <Stagger className="mt-8 grid gap-3 lg:grid-cols-5">
+          {partnerRoles.map((item, index) => (
             <StaggerItem key={item.role}>
-              <InfoCard className="h-full" title={item.role}>
-                <p className="text-base leading-7 text-muted-foreground">{item.description}</p>
-              </InfoCard>
+              <div
+                className={`h-full rounded-lg border bg-card p-4 shadow-sm ${
+                  index === partnerRoles.length - 1 ? "border-accent/40" : "border-border"
+                }`}
+              >
+                <p className="text-base font-semibold">{item.role}</p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
             </StaggerItem>
           ))}
         </Stagger>

@@ -11,7 +11,7 @@ const inquiryTypes = ["Partner inquiry", "Pilot interest", "Investor inquiry", "
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <main id="main-content" className="min-h-screen bg-surface text-foreground">
       <SiteHeader />
       <Section tone="cream">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

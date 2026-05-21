@@ -9,7 +9,7 @@ const tones = {
   cream: "bg-background text-foreground",
   sand: "bg-surface text-foreground",
   white: "bg-card text-card-foreground",
-  dark: "bg-panel text-panel-foreground",
+  dark: "bg-panel text-panel-foreground [background-image:linear-gradient(135deg,rgb(255_255_255_/_6%)_0%,transparent_42%)]",
 };
 
 export function Section({
@@ -19,7 +19,10 @@ export function Section({
   className = "",
 }: SectionProps) {
   return (
-    <section id={id} className={`border-b border-border ${tones[tone]} ${className}`}>
+    <section
+      id={id}
+      className={`relative border-b border-border ${tones[tone]} ${className}`}
+    >
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         {children}
       </div>

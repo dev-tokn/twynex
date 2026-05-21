@@ -46,7 +46,7 @@ const advisors = team.filter((member) => member.group === "advisor");
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <main id="main-content" className="min-h-screen bg-surface text-foreground">
       <SiteHeader />
       <Section tone="cream">
         <Reveal>

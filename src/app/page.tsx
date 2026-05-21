@@ -1,8 +1,10 @@
+import { ArrowRight, CheckCircle2, Globe2, ShieldCheck } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { InfoCard } from "@/components/ui/info-card";
@@ -22,13 +24,20 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <main id="main-content" className="min-h-screen bg-surface text-foreground">
       <SiteHeader />
 
-      <section id="home" className="overflow-hidden border-b border-border bg-background">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-24">
+      <section
+        id="home"
+        className="relative overflow-hidden border-b border-border bg-background"
+      >
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[linear-gradient(135deg,rgb(8_120_101_/_10%),transparent_36%),linear-gradient(90deg,rgb(17_24_23_/_6%)_1px,transparent_1px),linear-gradient(0deg,rgb(17_24_23_/_5%)_1px,transparent_1px)] bg-[size:auto,72px_72px,72px_72px]" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:py-20">
           <Reveal className="flex flex-col justify-center">
-            <Eyebrow className="mb-5">Cross-border transaction orchestration</Eyebrow>
+            <div className="mb-5 flex flex-wrap gap-2">
+              <Badge tone="accent">Cross-border transaction orchestration</Badge>
+              <Badge>Built for regulated partners</Badge>
+            </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">
               Globalizing America&apos;s Payment Rails
             </h1>
@@ -43,9 +52,39 @@ export default function Home() {
                 Partner with Twynex
               </Button>
             </div>
-            <div className="mt-10 grid gap-4 border-t border-border pt-8 sm:grid-cols-3">
+            <div className="mt-8 grid gap-3 rounded-lg border border-border bg-card/85 p-3 shadow-sm sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+              <div className="flex items-center gap-3">
+                <div className="grid size-9 place-items-center rounded-lg bg-primary text-primary-foreground">
+                  <Globe2 className="size-4" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase text-subtle-foreground">
+                    Origin
+                  </p>
+                  <p className="text-sm font-semibold">US-side relationship</p>
+                </div>
+              </div>
+              <ArrowRight className="hidden size-4 text-accent sm:block" aria-hidden="true" />
+              <div className="flex items-center gap-3">
+                <div className="grid size-9 place-items-center rounded-lg bg-accent text-accent-foreground">
+                  <CheckCircle2 className="size-4" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase text-subtle-foreground">
+                    Destination
+                  </p>
+                  <p className="text-sm font-semibold">Local payment moment</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-10 grid gap-0 overflow-hidden rounded-lg border border-border bg-card sm:grid-cols-3">
               {metrics.map((metric) => (
-                <Metric key={metric.label} {...metric} />
+                <div
+                  key={metric.label}
+                  className="border-b border-border p-4 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
+                >
+                  <Metric {...metric} />
+                </div>
               ))}
             </div>
           </Reveal>
@@ -125,12 +164,15 @@ export default function Home() {
               audit records, and payment-standard aligned messaging.
             </p>
           </Reveal>
-          <Stagger className="grid gap-4 sm:grid-cols-2">
+          <Stagger className="grid gap-3 sm:grid-cols-2">
             {trustPoints.map((item) => (
               <StaggerItem key={item}>
-                <InfoCard className="h-full bg-background p-5">
+                <div className="flex h-full gap-3 rounded-lg border border-border bg-background p-4">
+                  <div className="mt-1 grid size-8 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent">
+                    <ShieldCheck className="size-4" aria-hidden="true" />
+                  </div>
                   <p className="text-base font-medium leading-7">{item}</p>
-                </InfoCard>
+                </div>
               </StaggerItem>
             ))}
           </Stagger>
