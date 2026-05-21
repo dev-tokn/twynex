@@ -21,17 +21,17 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f7f4ee] text-[#171411]">
+    <main className="min-h-screen bg-[#f7f4ee] text-[#171411] dark:bg-[#111827] dark:text-[#f8fafc]">
       <SiteHeader />
 
-      <section id="home" className="overflow-hidden border-b border-[#ded5c7] bg-[#fffaf2]">
+      <section id="home" className="overflow-hidden border-b border-[#ded5c7] bg-[#fffaf2] dark:border-[#293344] dark:bg-[#0f1720]">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-24">
           <div className="flex flex-col justify-center">
             <Eyebrow className="mb-5">Cross-border transaction orchestration</Eyebrow>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">
               Globalizing America&apos;s Payment Rails
             </h1>
-            <p className="mt-7 max-w-2xl text-xl leading-8 text-[#5f574d]">
+            <p className="mt-7 max-w-2xl text-xl leading-8 text-[#5f574d] dark:text-[#a8b4c5]">
               Twynex helps US banks, issuers, and regulated partners connect
               American customers to local payment rails abroad.
             </p>
@@ -46,7 +46,7 @@ export default function Home() {
                 Investor inquiry
               </Button>
             </div>
-            <div className="mt-10 grid gap-4 border-t border-[#ded5c7] pt-8 sm:grid-cols-3">
+            <div className="mt-10 grid gap-4 border-t border-[#ded5c7] pt-8 dark:border-[#293344] sm:grid-cols-3">
               {metrics.map((metric) => (
                 <Metric key={metric.label} {...metric} />
               ))}
@@ -68,13 +68,13 @@ export default function Home() {
           <div className="grid gap-4 sm:grid-cols-2">
             {problemPoints.map((item) => (
               <InfoCard key={item} className="p-5">
-                <p className="text-base leading-7 text-[#4d453d]">{item}</p>
+                <p className="text-base leading-7 text-[#4d453d] dark:text-[#c7d2e3]">{item}</p>
               </InfoCard>
             ))}
           </div>
         </div>
 
-        <div className="mt-14 rounded-lg bg-[#171411] p-6 text-white sm:p-8">
+        <div className="mt-14 rounded-lg bg-[#171411] p-6 text-white dark:bg-[#050812] sm:p-8">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <Eyebrow tone="mint">How Twynex works</Eyebrow>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="grid gap-4 lg:grid-cols-3">
           {audiencePaths.map((path) => (
             <InfoCard key={path.label} eyebrow={path.label} title={path.title}>
-              <p className="text-base leading-7 text-[#5f574d]">{path.copy}</p>
+              <p className="text-base leading-7 text-[#5f574d] dark:text-[#a8b4c5]">{path.copy}</p>
             </InfoCard>
           ))}
         </div>
@@ -119,10 +119,10 @@ export default function Home() {
         <div className="mt-9 grid gap-4 lg:grid-cols-3">
           {useCases.map((useCase) => (
             <InfoCard key={useCase.title}>
-              <p className="text-sm font-semibold text-[#0d7c66]">{useCase.launch}</p>
+              <p className="text-sm font-semibold text-[#0d7c66] dark:text-[#5fcbb2]">{useCase.launch}</p>
               <h3 className="mt-4 text-2xl font-semibold">{useCase.title}</h3>
-              <p className="mt-3 text-sm font-medium text-[#82776b]">{useCase.markets}</p>
-              <p className="mt-5 text-base leading-7 text-[#5f574d]">{useCase.copy}</p>
+              <p className="mt-3 text-sm font-medium text-[#82776b] dark:text-[#8fa3bd]">{useCase.markets}</p>
+              <p className="mt-5 text-base leading-7 text-[#5f574d] dark:text-[#a8b4c5]">{useCase.copy}</p>
             </InfoCard>
           ))}
         </div>
@@ -135,14 +135,14 @@ export default function Home() {
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
               Designed around regulated partners, auditability, and conservative public claims.
             </h2>
-            <p className="mt-5 text-lg leading-8 text-[#5f574d]">
+            <p className="mt-5 text-lg leading-8 text-[#5f574d] dark:text-[#a8b4c5]">
               Twynex is positioned around a partner-bank model where regulated
               partners perform KYC and operate payment accounts and flows.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {trustPoints.map((item) => (
-              <InfoCard key={item} className="bg-[#fffaf2] p-5">
+              <InfoCard key={item} className="bg-[#fffaf2] p-5 dark:bg-[#111827]">
                 <p className="text-base font-medium leading-7">{item}</p>
               </InfoCard>
             ))}
@@ -167,7 +167,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <section id="contact" className="bg-[#fffaf2]">
+      <section id="contact" className="bg-[#fffaf2] dark:bg-[#0f1720]">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
@@ -175,7 +175,7 @@ export default function Home() {
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight">
                 Build the next cross-border payment corridor with Twynex.
               </h2>
-              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5f574d]">
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5f574d] dark:text-[#a8b4c5]">
                 For partner, investor, or pilot inquiries, contact Sudhir Kulkarni
                 and the Twynex team.
               </p>

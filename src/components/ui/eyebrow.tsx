@@ -5,8 +5,8 @@ type EyebrowProps = {
 };
 
 const tones = {
-  green: "text-[#0d7c66]",
-  red: "text-[#b24a3b]",
+  green: "text-[#0d7c66] dark:text-[#5fcbb2]",
+  red: "text-[#b24a3b] dark:text-[#f08d7e]",
   mint: "text-[#87d6c5]",
 };
 

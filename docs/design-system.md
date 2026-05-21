@@ -29,6 +29,13 @@ Current palette:
 - Accent amber: `#d69b2d`
 - Dark-section muted text: `#d9d0c5`
 
+Theme behavior:
+
+- Theme support uses `next-themes`.
+- The default theme is `system`.
+- Manual theme selection is available through a fixed bottom-right toggle with `z-index: 100`.
+- Dark mode should preserve the same enterprise/infrastructure tone rather than becoming a high-contrast novelty skin.
+
 Shape and spacing:
 
 - Border radius: mostly `8px`
