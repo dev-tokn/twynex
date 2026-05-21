@@ -117,6 +117,30 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section id="trust" tone="white">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <Reveal>
+            <Eyebrow>Trust</Eyebrow>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight">
+              A regulated-partner posture for corridor payments.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-muted-foreground">
+              Twynex is designed around partner-bank participation, auditability, and
+              conservative compliance language pending legal review.
+            </p>
+          </Reveal>
+          <Stagger className="grid gap-4 sm:grid-cols-2">
+            {trustPoints.map((item) => (
+              <StaggerItem key={item}>
+                <InfoCard className="h-full bg-background p-5">
+                  <p className="text-base font-medium leading-7">{item}</p>
+                </InfoCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </Section>
+
       <Section id="focus" tone="sand">
         <Reveal>
           <Eyebrow tone="red">Initial focus</Eyebrow>
@@ -171,33 +195,6 @@ export default function Home() {
             {partnerTypes.map((item) => (
               <StaggerItem key={item}>
                 <InfoCard className="h-full p-5">
-                  <p className="text-base font-medium leading-7">{item}</p>
-                </InfoCard>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </Section>
-
-      <Section id="trust-preview" tone="cream">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <Reveal>
-            <Eyebrow>Trust preview</Eyebrow>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              Designed around regulated partners, auditability, and conservative claims.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">
-              Twynex is positioned around a partner-bank model where regulated
-              partners perform KYC and operate payment accounts and flows where applicable.
-            </p>
-            <Button href="/trust" variant="secondary" className="mt-7 inline-block">
-              View trust posture
-            </Button>
-          </Reveal>
-          <Stagger className="grid gap-4 sm:grid-cols-2">
-            {trustPoints.slice(0, 4).map((item) => (
-              <StaggerItem key={item}>
-                <InfoCard className="h-full bg-background p-5">
                   <p className="text-base font-medium leading-7">{item}</p>
                 </InfoCard>
               </StaggerItem>
