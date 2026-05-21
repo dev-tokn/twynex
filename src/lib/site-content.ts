@@ -17,9 +17,8 @@ export const footerLegalLinks = [
 ];
 
 export const contact = {
-  email: "sudhir@twynex.com",
-  phone: "+1 (408) 464-7982",
-  phoneHref: "tel:+14084647982",
+  name: "Twynex Contact Team",
+  email: "contact@twynex.example",
   location: "Twynex, CA USA",
 };
 

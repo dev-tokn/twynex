@@ -21,15 +21,13 @@ export default function ContactPage() {
               Route the right Twynex conversation.
             </h1>
             <p className="mt-7 text-xl leading-8 text-muted-foreground">
-              For partner, pilot, investor, or company inquiries, contact Sudhir
-              Kulkarni and the Twynex team.
+              For partner, pilot, investor, or company inquiries, contact the
+              Twynex team.
             </p>
+            <p className="mt-6 text-base font-semibold">{contact.name}</p>
             <div className="mt-8 grid gap-3">
               <Button href={`mailto:${contact.email}`} className="inline-block">
                 {contact.email}
-              </Button>
-              <Button href={contact.phoneHref} variant="secondary" className="inline-block">
-                {contact.phone}
               </Button>
             </div>
           </Reveal>

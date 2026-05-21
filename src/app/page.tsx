@@ -167,8 +167,8 @@ export default function Home() {
                 Build the next cross-border payment corridor with Twynex.
               </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-                For partner, pilot, investor, or company inquiries, contact Sudhir
-                Kulkarni and the Twynex team.
+                For partner, pilot, investor, or company inquiries, contact the
+                Twynex team.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
